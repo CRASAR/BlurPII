@@ -9,7 +9,7 @@ FEMA/DHS has stated that all images that have all legible license plates and fac
 
 ***
 
-Initial setup of this repository can be performed by simply running the `setup.sh` script. Here is the sample usage. 
+Initial setup of this repository can be performed by simply running the `setup.sh` script. You will need python and pip installed. I suggest using anaconda for environment management. Here is the sample usage. 
 ```
 ./setup.sh
 ```
