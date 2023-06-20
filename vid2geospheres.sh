@@ -1,6 +1,6 @@
-VIDEO_PATH="./TornadoSample/vid/GS010017.mp4"
-GPX_PATH="./TornadoSample/vid/GS010017.gpx"
-OUTPUT_PATH="./TornadoSample/geospheres"
+VIDEO_PATH="./input/vid/GS010017.mp4"
+GPX_PATH="./input/vid/GS010017.gpx"
+OUTPUT_PATH="./input/geospheres"
 VIDEO_SAMPLE_INTERVAL=10
 USER_NAME="tmanzini"
 

@@ -2,7 +2,7 @@ import os
 import torch
 import argparse
 
-from mapillary_tools.commands.video_process import Command as ProcessVideoCommand
+from mapillary_tools.mapillary_tools.commands.video_process import Command as ProcessVideoCommand
 
 from datetime import datetime
 from pathlib import Path
