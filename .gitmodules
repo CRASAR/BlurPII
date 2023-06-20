@@ -1,0 +1,3 @@
+[submodule "src/mapillary_tools"]
+	path = src/mapillary_tools
+	url = https://github.com/mapillary/mapillary_tools
