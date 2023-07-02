@@ -71,6 +71,7 @@ if __name__ == "__main__":
 		for file in files:
 			#Load the image
 			image = Image.open(file)
+			exif = image.getexif()
 
 			#Generate the tiles that will be passed to the model
 			tiles, tile_positions = get_tiles(image, args.tile_size, args.tile_size)
@@ -103,7 +104,7 @@ if __name__ == "__main__":
 
 			#Save the image by deleting the original and saving the scrubbed one in its place.
 			os.remove(file)
-			scrubbed_image.save(file)
+			scrubbed_image.save(file, exif=exif)
 
 			#Advance the progress bar
 			bar()

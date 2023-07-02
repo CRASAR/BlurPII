@@ -21,8 +21,12 @@ def get_people_in_image(img, model, threshold):
     model.conf = threshold
     model.eval()
     detections = model(images, size=640)
-    predictions:torch.Tensor = detections.pred[0] # the predictions for our single image
+    predictions:torch.Tensor = torch.clone(detections.pred[0]) # the predictions for our single image
     boxes = predictions[:, 0:4]
+    for i in range(0, len(boxes)):
+        diff = boxes[i, 3]-boxes[i, 1]
+        boxes[i, 1] += diff
+        boxes[i, 3] += diff
     scores = predictions[:, 4]
     labels = predictions[:, 5]
     return boxes.cpu().tolist() # image and number of detections
